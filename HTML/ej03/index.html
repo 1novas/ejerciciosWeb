@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="POST">
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="nombre">Nombre*</label>
+            <input type="text" id="nombre" required>
+
+            <label for="apellidos">Apellidos*</label>
+            <input type="text" id="apellidos" required>
+
+            <label for="fecha_nacimiento">Fecha de nacimiento*</label>
+            <input type="date" id="fecha_nacimiento" required>
+
+            <label for="telefono">Número de teléfono*</label>
+            <input type="tel" id="telefono" pattern="[0-9]{9}" title="Debe tener 9 dígitos" required>
+
+            <label for="nota_media">Nota media en la universidad*</label>
+            <input type="number" id="nota_media" min="0" max="10" step="0.01" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dirección</legend>
+            <label for="tipo_via">Tipo de vía*</label>
+            <input type="text" id="tipo_via" required>
+
+            <label for="nombre_via">Nombre de la vía*</label>
+            <input type="text" id="nombre_via" required>
+
+            <label for="codigo_postal">Código Postal*</label>
+            <input type="text" id="codigo_postal" pattern="[0-9]{5}" title="Debe tener 5 dígitos" required>
+
+            <label for="ciudad">Ciudad*</label>
+            <input type="text" id="ciudad" name="ciudad" required>
+
+            <label for="provincia">Provincia*</label>
+            <input type="text" id="provincia" required>
+
+            <label for="pais">País*</label>
+            <input type="text" id="pais" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Cuenta</legend>
+            <label for="correo">Correo electrónico*</label>
+            <input type="email" id="correo" required>
+
+            <label for="contraseña">Contraseña*</label>
+            <input type="password" id="contraseña" required>
+
+            <label for="repetir_contraseña">Repetir contraseña*</label>
+            <input type="password" id="repetir_contraseña" required>
+
+            <label for="pais_seleccion">Seleccionar país*</label>
+            <select id="pais_seleccion" required>
+                <option value="España">España</option>
+                <option value="Francia">Francia</option>
+                <option value="Portugal">Portugal</option>
+                <option value="Andorra">Andorra</option>
+            </select>
+            <br>
+            <label>Tipo de cuenta*</label>
+            <div>
+                <input type="radio" id="gratuita" value="gratuita" required>
+                <label for="gratuita">Gratuita</label>
+                <p>Sin coste, acceso limitado a funcionalidades básicas.</p>
+
+                <input type="radio" id="basica" value="basica">
+                <label for="basica">Básica</label>
+                <p>Acceso estándar con funcionalidades adicionales.</p>
+
+                <input type="radio" id="premium" value="premium">
+                <label for="premium">Premium</label>
+                <p>Acceso completo con soporte a todas horas.</p>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Sobre mí</legend>
+            <label for="sobre_mi">Breve descripción</label>
+            <textarea id="sobre_mi" rows="1" placeholder="Escribe algo sobre ti..." ></textarea>
+
+            <label for="foto_perfil">Foto de perfil</label>
+            <input type="file" id="foto_perfil" accept="image/*">
+
+            <label for="cv">Subir CV</label>
+            <input type="file" id="cv" accept=".pdf,.doc,.docx">
+        </fieldset>
+
+        <button type="submit">Registrar</button>
+    </form>
+</body>
+</html>
